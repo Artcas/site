@@ -1,0 +1,121 @@
+<html>
+    <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet"  id="changable" href="css/carulen.css" media="screen">
+    <link rel="stylesheet"  href="/css/custom.min.css">
+    <link rel="stylesheet" href="css/variables.less">
+    <link rel="stylesheet" href="css/test.css">
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="js/elasticlunr.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/utils.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/tokenizer.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/pipeline.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/event_emitter.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/index.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/document_store.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/stemmer.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/stop_word_filter.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/trimmer.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/inverted_index.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/configuration.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/utils.js" type="text/javascript" charset="utf-8"></script>
+    <script src="/js/custom.js"></script>
+    <script type="text/javascript">/* <![CDATA[ */(function(d,s,a,i,j,r,l,m,t){try{l=d.getElementsByTagName('a');t=d.createElement('textarea');for(i=0;l.length-i;i++){try{a=l[i].href;s=a.indexOf('/cdn-cgi/l/email-protection');m=a.length;if(a&&s>-1&&m>28){j=28+s;s='';if(j<m){r='0x'+a.substr(j,2)|0;for(j+=2;j<m&&a.charAt(j)!='X';j+=2)s+='%'+('0'+('0x'+a.substr(j,2)^r).toString(16)).slice(-2);j++;s=decodeURIComponent(s)+a.substr(j,m-j)}t.innerHTML=s.replace(/</g,'&lt;').replace(/>/g,'&gt;');l[i].href='mailto:'+t.value}}catch(e){}}}catch(e){}})(document);/* ]]> */</script>
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="../bower_components/html5shiv/dist/html5shiv.js"></script>
+      <script src="../bower_components/respond/dest/respond.min.js"></script>
+    <![endif]-->
+  
+  </head>
+  <body>
+      <div class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <a href="#" class="navbar-brand">Bootswatch</a>
+          <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div class="navbar-collapse collapse" id="navbar-main">
+          <ul class="nav navbar-nav">
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="themes">Themes <span class="caret"></span></a>
+              <ul class="dropdown-menu" aria-labelledby="themes">
+                <li><a href="#" id="carulean">Cerulean</a></li>
+                <li><a href="#" id="cosmo">Cosmo</a></li>
+                <li><a href="#" id="cyborg">Cyborg</a></li>
+                <li><a href="#" id="darkhy">Darkly</a></li>
+                <li><a href="#" id="flaty">Flatly</a></li>
+                <li><a href="#" id="journal">Journal</a></li>
+                <li><a href="#" id="lumen">Lumen</a></li>
+                <li><a href="#" id="peper">Paper</a></li>
+                <li><a href="#" id="readeable">Readable</a></li>
+                <li><a href="#" id="sandstone">Sandstone</a></li>
+                <li><a href="#" id="simplex">Simplex</a></li>
+                <li><a href="#" id="slate">Slate</a></li>
+                <li><a href="#" id="spacelab">Spacelab</a></li>
+                <li><a href="#" id="superhero">Superhero</a></li>
+                <li><a href="#" id="united">United</a></li>
+                <li><a href="#" id="yeti">Yeti</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#" id="user_guide">User's Guide</a>
+            </li>
+             <li>
+              <a href="#" id="admin_guide">Admin's Guide</a>
+            </li>
+             <li class="dropdown">
+                 <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="themes">FAQ  <span class="caret"></span></a>
+                 <ul class="dropdown-menu" aria-labelledby="themes">
+                     <li> <a href="#">FAQ</a></li>
+                     <li> <a href="#" id="to_do_smith">How to do smth?</a></li>
+                 </ul>
+            </li>
+            <li>
+             <div class="" style="width:240px; margin-top:5px;margin-left:30px;">
+                  <input type="search"  placeholde="Search" class="form-control seach_area pull-left"  style="width:150px;">
+                  <button type="button" class="search_button btn btn-success pull-right">Seatch</button>
+             </div>
+            </li>
+            <li class="dropdown">
+             
+            </li>
+          </ul>
+          
+        </div>
+      </div>
+    </div>
+    <div class="container">
+        <div id="qunit">
+            <script>
+           
+            </script>
+        </div>
+      <div class="page-header" id="banner">
+        <div class="row">
+          <div class="col-lg-3 col-md-7 col-sm-6 pull-left">
+            <h1>Cosmo</h1>
+            <p class="lead">An ode to Metro</p>
+            <div class="list-group table-of-contents display_none">
+              <a class="list-group-item" href="#">Admin link1</a>
+              <a class="list-group-item" href="#">Admin link2</a>
+              <a class="list-group-item" href="#">Admin link3</a>
+            </div>
+          </div>
+           <div class="col-lg-9 col-md-3 col-sm-4 pull-right">
+            <h1 class="changable_header"></h1>
+            <p class="lead changable_content">An ode to Metro</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="js/theme.js"></script>
+  </body>
+</html>
