@@ -101,8 +101,9 @@ index.addDoc(doc3);
 index.addDoc(doc4);
 
     
-     $(window).load(function(){
+    $(window).load(function(){
          $('#user_guide').click(function(){
+             $('.display_none').css({'display':'none'})
          $('.changable_header').text(index.search("demo-1")['0'].doc.title)
          $('.changable_content').text(index.search("demo-1")['0'].doc.body)
          })
@@ -110,6 +111,7 @@ index.addDoc(doc4);
      
      
          $('#to_do_smith').click(function(){
+             $('.display_none').css({'display':'none'})
          $('.changable_header').text(index.search("content")['0'].doc.title)
          $('.changable_content').text(index.search("content")['0'].doc.body)
          })
@@ -123,6 +125,7 @@ index.addDoc(doc4);
          })
      
          $('.search_button').click(function(){
+             $('.display_none').css({'display':'none'})
              var text = $('.seach_area').val();
              $('.changable_header').text(index.search(text , { 
              fields: {
