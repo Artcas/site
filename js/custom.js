@@ -58,12 +58,17 @@
 
     return lines;
   }
-    
-   
-   
-     
-     
+
+
+    var myPlugin = function (index, ru, de) {
+
+        }
+
+
+
+
  var index = elasticlunr(function () {
+     this.use(lunr.multiLanguage('en', 'ru'));
     this.addField('title');
     this.addField('body');
     this.setRef('id');
@@ -84,24 +89,29 @@ var doc2 = {
 var doc3 = {
     "id": 3,
     "title": "Searching Text",
-    "body": "demo ipsum dolor sit amet, consectetur adipiscing elit. In magna justo, hendrerit nec justo vel, mattis congue velit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Pellentesque ante mi, mollis sit amet consequat nec, pretium ac dolor. Proin elementum vel orci at dictum. Aliquam finibus rhoncus orci id semper. Morbi volutpat purus id risus varius finibus. demo nec sapien vel ante pretium tempor vel et eros. Pellentesque consectetur scelerisque ipsum ut luctus. Sed scelerisque, metus sed tempus demo, nunc dui iaculis diam, non vehicula ex quam sed dolor. Donec non interdum libero. demo viverra turpis nibh, eget accumsan urna pulvinar nec. Cras sollicitudin nulla ut felis accumsan porttitor.Lorem ipsum dolor sit amet, consectetur adipiscing elit. In magna justo, hendrerit nec justo demo, mattis congue velit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Pellentesque ante mi, mollis sit amet consequat nec, pretium ac dolor. Proin elementum vel orci at dictum. Aliquam finibus rhoncus orci id semper. Morbi volutpat purus id risus varius finibus. Sed nec sapien vel ante pretium tempor vel et eros. Pellentesque consectetur scelerisque ipsum ut luctus. Sed scelerisque, metus sed tempus interdum, nunc dui iaculis diam, non vehicula ex quam sed dolor. Donec non interdum libero. Morbi viverra turpis nibh, eget accumsan urna pulvinar nec. Cras sollicitudin nulla ut felis accumsan porttitor.Lorem ipsum dolor sit amet, consectetur adipiscing elit. In magna justo, hendrerit nec justo vel, demo congue velit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Pellentesque ante mi, mollis sit amet consequat nec, pretium ac dolor. Proin elementum vel orci at dictum. Aliquam finibus rhoncus orci id semper. Morbi volutpat purus id risus varius finibus. Sed nec sapien vel ante pretium tempor vel et eros. Pellentesque consectetur scelerisque ipsum ut luctus. Sed scelerisque, metus sed tempus interdum, nunc dui iaculis diam, non vehicula ex quam sed dolor. Donec non interdum libero. Morbi viverra turpis nibh, eget accumsan urna pulvinar nec. Cras sollicitudin nulla ut felis accumsan porttitor."
+    "body": "демо ipsum dolor sit amet, демо adipiscing elit. In magna justo, демо nec justo vel, mattis congue velit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Pellentesque ante mi, mollis sit amet consequat nec, pretium ac dolor. Proin elementum vel orci at dictum. Aliquam finibus rhoncus orci id semper. Morbi volutpat purus id risus varius finibus. demo nec sapien vel ante pretium tempor vel et eros. Pellentesque consectetur scelerisque ipsum ut luctus. Sed scelerisque, metus sed tempus demo, nunc dui iaculis diam, non vehicula ex quam sed dolor. Donec non interdum libero. demo viverra turpis nibh, eget accumsan urna pulvinar nec. Cras sollicitudin nulla ut felis accumsan porttitor.Lorem ipsum dolor sit amet, consectetur adipiscing elit. In magna justo, hendrerit nec justo demo, mattis congue velit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Pellentesque ante mi, mollis sit amet consequat nec, pretium ac dolor. Proin elementum vel orci at dictum. Aliquam finibus rhoncus orci id semper. Morbi volutpat purus id risus varius finibus. Sed nec sapien vel ante pretium tempor vel et eros. Pellentesque consectetur scelerisque ipsum ut luctus. Sed scelerisque, metus sed tempus interdum, nunc dui iaculis diam, non vehicula ex quam sed dolor. Donec non interdum libero. Morbi viverra turpis nibh, eget accumsan urna pulvinar nec. Cras sollicitudin nulla ut felis accumsan porttitor.Lorem ipsum dolor sit amet, consectetur adipiscing elit. In magna justo, hendrerit nec justo vel, demo congue velit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Pellentesque ante mi, mollis sit amet consequat nec, pretium ac dolor. Proin elementum vel orci at dictum. Aliquam finibus rhoncus orci id semper. Morbi volutpat purus id risus varius finibus. Sed nec sapien vel ante pretium tempor vel et eros. Pellentesque consectetur scelerisque ipsum ut luctus. Sed scelerisque, metus sed tempus interdum, nunc dui iaculis diam, non vehicula ex quam sed dolor. Donec non interdum libero. Morbi viverra turpis nibh, eget accumsan urna pulvinar nec. Cras sollicitudin nulla ut felis accumsan porttitor."
 }
 var doc4 = {
     "id": 4,
     "title": "demo-4",
-    "body": " ipsum dolor sit amet, consectetur adipiscing elit. In magna justo, hendrerit nec justo vel, mattis congue velit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Pellentesque ante mi, mollis sit amet consequat nec, pretium ac dolor. Proin elementum vel orci at dictum. Aliquam finibus rhoncus orci id semper. Morbi volutpat purus id risus varius finibus.  nec sapien vel ante pretium tempor vel et eros. Pellentesque consectetur scelerisque ipsum ut luctus. Sed scelerisque, metus sed tempus , nunc dui iaculis diam, non vehicula ex quam sed dolor. Donec non interdum libero.  viverra turpis nibh, eget accumsan urna pulvinar nec. Cras sollicitudin nulla ut felis accumsan porttitor.Lorem ipsum dolor sit amet, consectetur adipiscing elit. In magna justo, hendrerit nec justo , mattis congue velit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Pellentesque ante mi, mollis sit amet consequat nec, pretium ac dolor. Proin elementum vel orci at dictum. Aliquam finibus rhoncus orci id semper. Morbi volutpat purus id risus varius finibus. Sed nec sapien vel ante pretium tempor vel et eros. Pellentesque consectetur scelerisque ipsum ut luctus. Sed scelerisque, metus sed tempus interdum, nunc dui iaculis diam, non vehicula ex quam sed dolor. Donec non interdum libero. Morbi viverra turpis nibh, eget accumsan urna pulvinar nec. Cras sollicitudin nulla ut felis accumsan porttitor.Lorem ipsum dolor sit amet, consectetur adipiscing elit. In magna justo, hendrerit nec justo vel,  congue velit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Pellentesque ante mi, mollis sit amet consequat nec, pretium ac dolor. Proin elementum vel orci at dictum. Aliquam finibus rhoncus orci id semper. Morbi volutpat purus id risus varius finibus. Sed nec sapien vel ante pretium tempor vel et eros. Pellentesque consectetur scelerisque ipsum ut luctus. Sed scelerisque, metus sed tempus interdum, nunc dui iaculis diam, non vehicula ex quam sed dolor. Donec non interdum libero. Morbi viverra turpis nibh, eget accumsan urna pulvinar nec. Cras sollicitudin nulla ut felis accumsan porttitor."
+    "body": "  dolor sit amet, consectetur adipiscing elit. In magna justo, hendrerit nec justo vel, mattis congue velit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Pellentesque ante mi, mollis sit amet consequat nec, pretium ac dolor. Proin elementum vel orci at dictum. демо finibus rhoncus orci id semper. Morbi volutpat purus id risus varius finibus.  nec sapien vel ante pretium tempor vel et eros. Pellentesque consectetur scelerisque ipsum ut luctus. Sed scelerisque, metus sed tempus , nunc dui iaculis diam, non vehicula ex quam sed dolor. Donec non interdum libero.  viverra turpis nibh, eget accumsan urna pulvinar nec. Cras sollicitudin nulla ut felis accumsan porttitor.Lorem ipsum dolor sit amet, consectetur adipiscing elit. In magna justo, hendrerit nec justo , mattis congue velit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Pellentesque ante mi, mollis sit amet consequat nec, pretium ac dolor. Proin elementum vel orci at dictum. Aliquam finibus rhoncus orci id semper. Morbi volutpat purus id risus varius finibus. Sed nec sapien vel ante pretium tempor vel et eros. Pellentesque consectetur scelerisque ipsum ut luctus. Sed scelerisque, metus sed tempus interdum, nunc dui iaculis diam, non vehicula ex quam sed dolor. Donec non interdum libero. Morbi viverra turpis nibh, eget accumsan urna pulvinar nec. Cras sollicitudin nulla ut felis accumsan porttitor.Lorem ipsum dolor sit amet, consectetur adipiscing elit. In magna justo, hendrerit nec justo vel,  congue velit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Pellentesque ante mi, mollis sit amet consequat nec, pretium ac dolor. Proin elementum vel orci at dictum. Aliquam finibus rhoncus orci id semper. Morbi volutpat purus id risus varius finibus. Sed nec sapien vel ante pretium tempor vel et eros. Pellentesque consectetur scelerisque ipsum ut luctus. Sed scelerisque, metus sed tempus interdum, nunc dui iaculis diam, non vehicula ex quam sed dolor. Donec non interdum libero. Morbi viverra turpis nibh, eget accumsan urna pulvinar nec. Cras sollicitudin nulla ut felis accumsan porttitor."
 }
 
 
-     
-  
+
+
+    /* init lunr */
+
+
 index.addDoc(doc1);
 index.addDoc(doc2);
 index.addDoc(doc3);
 index.addDoc(doc4);
+    
+    
 
     
-    $(window).load(function(){
+     $(window).load(function(){
          $('#user_guide').click(function(){
              $('.display_none').css({'display':'none'})
          $('.changable_header').text(index.search("demo-1")['0'].doc.title)
@@ -127,17 +137,20 @@ index.addDoc(doc4);
          $('.search_button').click(function(){
              $('.display_none').css({'display':'none'})
              var text = $('.seach_area').val();
-             $('.changable_header').text(index.search(text , { 
-             fields: {
-                body: {boost: 1}
-             }
+             console.log(index.search(text))
+             $('.changable_header').text(index.search(text , {
+                 "fields": {
+                     "body": {"boost": 5}
+                 },
                 })['0'].doc.title)
-             $('.changable_content').text(index.search(text , { 
-             fields: {
-                body: {boost: 1}
-             }
+             $('.changable_content').text(index.search(text , {
+                 "fields": {
+                     "body": {"boost": 5}
+                 },
                 })['0'].doc.body)
          })
+         
+         
      })
      
       
